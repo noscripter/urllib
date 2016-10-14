@@ -302,6 +302,42 @@ urllib.request('http://127.0.0.1:1984/socket.end', function (err, data, res) {
 });
 ```
 
+## Proxy
+
+Support both `http` and `https` protocol.
+
+### Programming
+
+```js
+urllib.request('https://npm.taobao.org', {
+  proxy: 'http://localhost:8008',
+}, (err, data, res) => {
+  console.log(res.status, res.headers);
+});
+```
+
+### System environment variable
+
+- http
+
+```bash
+HTTP_PROXY=http://localhost:8008
+http_proxy=http://localhost:8008
+```
+
+- https
+
+```bash
+HTTP_PROXY=http://localhost:8008
+http_proxy=http://localhost:8008
+HTTPS_PROXY=https://localhost:8008
+https_proxy=https://localhost:8008
+```
+
+```js
+$ http_proxy=http://localhost:8008 node index.js
+```
+
 ## TODO
 
 * [ ] Support component

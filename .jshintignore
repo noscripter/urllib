@@ -1,3 +1,6 @@
 node_modules/
 coverage/
 .git/
+
+# copy files
+lib/getProxyFromURI.js
